@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <h1>Simpest input-output</h1>
       <div>{{data1.name}}</div>
-      <app-child></app-child>
+      <app-child [data]="data1"></app-child>
     </div>
   `
 })
@@ -18,5 +18,5 @@ export class AppComponent  {
       detail2: 'This is detail 2'
     }
   }
-  
+
 }
