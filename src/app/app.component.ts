@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <h1>Simpest input-output</h1>
       <div>{{data1.name}}</div>
-      <app-child [data]="data1"></app-child>
+      <app-child [data]="data1" (receiveClick)="receiveDataInParent($event)" ></app-child>
     </div>
   `
 })
@@ -17,6 +17,10 @@ export class AppComponent  {
       detail1: 'This is detail 1',
       detail2: 'This is detail 2'
     }
+  }
+
+  receiveDataInParent(data) {
+    console.log('received in parent: ', data);
   }
 
 }
